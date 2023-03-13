@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dudios.szkolafx3.lab3.lab3Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Nowy" />
+                  <RadioMenuItem mnemonicParsing="false" text="1" />
+                  <RadioMenuItem mnemonicParsing="false" text="2" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="198.0" prefWidth="600.0">
+         <children>
+            <VBox  prefHeight="183.0" prefWidth="170.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#changeCollor" text="Blue">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ToogleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#changeCollor" text="Green" toggleGroup="$ToogleGroup" />
+                  <RadioButton mnemonicParsing="false" onAction="#changeCollor" text="Red" toggleGroup="$ToogleGroup" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="183.0" prefWidth="170.0" spacing="20.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" onAction="#changeText" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ToogleGroup2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" onAction="#changeText" text="2" toggleGroup="$ToogleGroup2" />
+                  <RadioButton mnemonicParsing="false" onAction="#changeText" text="3" toggleGroup="$ToogleGroup2" />
+                  <Label fx:id="info" text="Label" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="183.0" prefWidth="170.0" spacing="20.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+                  <CheckBox mnemonicParsing="false" text="CheckBox" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="206.0" prefWidth="600.0">
+         <children>
+            <TabPane prefHeight="191.0" prefWidth="609.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="159.0" prefWidth="145.0" spacing="20.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="apple" onAction="#changeImage" >
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="ToogleGroup3" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="book" toggleGroup="$ToogleGroup3" onAction="#changeImage"  />
+                                    <RadioButton mnemonicParsing="false" text="celownik" toggleGroup="$ToogleGroup3" onAction="#changeImage"  />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <ImageView fx:id="myImage" fitHeight="150.0" fitWidth="200.0" layoutX="169.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox prefWidth="150.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
